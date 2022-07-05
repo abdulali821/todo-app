@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import Bg from './components/Bg';
+import img from './assets/black-bg.jpg';
+import Copyright from './components/Copyright';
+import TodoContainer from './components/TodoContainer';
 
 function App() {
+  const image = img;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <Bg img={image}/>
+    <div className='container'>
+      <TodoContainer/>
     </div>
-  );
+    <Copyright/>
+    </>
+    
+  )
 }
 
 export default App;
