@@ -1,71 +1,62 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+.App {
+    text-align: center;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-body{
-    background-color: #181824;
-    color: #fff;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 16px;
+body,
+html,
+#root {
+    width: 100%;
+    height: 100%;
 }
-.container{
-    position: relative;
-    margin: auto;
-    width: 40%;
-}
-.todo-head{
-    padding-top: 70px;
+
+.todo-form {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     align-items: center;
 }
 
-.create-todo{
+li {
+    text-align: initial;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
     display: flex;
-    background-color: #25273C;
     width: 100%;
-    height: 30px;
+    flex-direction: column;
     align-items: center;
-    padding: 20px 10px 20px 10px;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
-input{
-    background-color: transparent;
-    border: transparent;
-    width: 100%;
-    caret-color: #fff;
-    color: rgb(186, 183, 183);
-    font-weight: bold;
+.App-link {
+    color: #61dafb;
 }
 
-button{
-    background-color: #181824;
-    color: #fff;
-    font-size: 12px;
-    margin-left: 5px;
-    padding: 8px 10px 8px 10px;
-    border-radius: 8px;
-    border: none;
-}
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
 
-input:focus{
-    outline: none;
-}
-
-.todo-item {
-    margin-top: 10px;
-    display: flex;
-    background-color: #25273C;
-    width: 100%;
-    height: 30px;
-    align-items: center;
-    padding: 20px 10px 20px 10px;
-}
-
-@media (max-width: 786px) {
-    .container {
-        width: 60%;
+    to {
+        transform: rotate(360deg);
     }
 }
